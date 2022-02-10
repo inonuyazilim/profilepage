@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            .kapali {
+                display: none;
+            }
+            .acik{
+                display: block;
+            }
+        </style>
+        <script>
+            function alert()
+            {
+                var elm = document.getElementById("mesaj");
+                elm.className = "acik";
+            }
+        </script>
+
+    </head>
+    <body>
+        <label>Adı</label>
+        <input />
+        <label>Soyadı</label>
+        <input />
+        <button onclick="alert()">Kaydet</button>
+        <label id="mesaj" class="kapali">Hoop!</label>
+    </body>
+</html>
