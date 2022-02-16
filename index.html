@@ -1,32 +1,21 @@
 <html>
     <head>
         <style>
-            .kapali {
-                display: none;
-            }
-            .acik{
-                display: block;
+            .buton{
+                text-decoration: none; 
+                padding: 5px; 
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: blue;
             }
         </style>
-        <script>
-            function alert()
-            {
-                var elm = document.getElementById("mesaj");
-                elm.className = "acik";
-            }
-        </script>
-
-        <!-- test -->
-
-        <!-- test2 -->
 
     </head>
     <body>
-        <label>Adı</label>
-        <input />
-        <label>Soyadı</label>
-        <input />
-        <button onclick="alert()">Kaydet</button>
-        <label id="mesaj" class="kapali">Hoop!</label>
+        <div style="width: 100%; height: 100px; 
+        padding: 10px; text-align: center ;">
+            <a class="buton" href="index.html">Anasayfa</a>
+            <a class="buton" href="iletisim.html" >İletişim</a>
+            <a class="buton" href="hakkinda.html">Hakkımızda</a>
+        </div>
     </body>
 </html>
