@@ -5,16 +5,27 @@
         input::-ms-clear {
             display: none;
         }
+
+        .buton{
+                text-decoration: none; 
+                padding: 5px; 
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: blue;
+            }
     </style>
     </head>
-    <bod>
-        <div style="width: 100%; height: 100px; 
+    <body>
+
+        <iframe width="100%" scrolling="no"
+        src="header.html" frameBorder="0">
+
+       </iframe>
+       <div style="width: 100%; height: 100px; 
         padding: 10px; text-align: center ;">
-            <a href="index.html" style="text-decoration: none; padding: 5px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Anasayfa</a>
-            <a href="iletisim.html" style="text-decoration: none;padding: 5px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">İletişim</a>
-            <a href="hakkinda.html" style="text-decoration: none;padding: 5px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Hakkımızda</a>
-            
-            <a  href="dersler.html" style="text-decoration: none;padding: 5px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Dersler</a>
+            <a class="buton" href="index.html">Anasayfa</a>
+            <a class="buton" href="iletisim.html" >İletişim</a>
+            <a class="buton" href="hakkinda.html">Hakkımızda</a>
+            <a class="buton" href="dersler.html">Dersler</a>
         </div>
         
         <span>
@@ -53,5 +64,10 @@
             
           </svg>
         
-    </bod>
+
+          <iframe width="100%" scrolling="no"
+        src="footer.html" frameBorder="0">
+
+       </iframe>
+    </body>
 </html>
