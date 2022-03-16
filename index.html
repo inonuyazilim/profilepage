@@ -2,6 +2,13 @@
     <head>
         
         <style>
+            .input1{
+                background-color: aqua;
+            }
+
+            .input2{
+                background-color: white;
+            }
             .buton{
                 text-decoration: none; 
                 padding: 5px; 
@@ -49,16 +56,71 @@
 
         <script>
             
+            
+            var b = 5;
+            var c = 10;
+
+            function deneme()
+            {
+                document.getElementById("deneme").className="input2";
+            }
+
             function SayiArtir() {
                 var s = document.getElementById("sayi").value;
                 s++;
+                a = 16;
                 document.getElementById("sayi").value = s;
             }
+
+            function Yazdir()
+            {
+                /*console.log("Merhaba Dünya!");
+                document.write("Merhaba Dünya!");*/
+                //document.getElementById("Yazdir").innerHTML = "Merhaba Dünya!";
+                //window.alert("Merhaba Dünya");
+                
+                //window.alert(a);
+                let ogrenci = {adi:"John", soyadi:"Doe", dogumtar:'01.01.2000', tckimlik:4654651345, memleketi:'Malatya'};
+
+                var dizi = [];
+                dizi[0] = 5;
+                dizi[2] = "Fatih";
+                dizi[3] = ogrenci;
+                let a = null;
+                x=5;
+                y=6;
+                
+                x = x && y;
+                //console.log(dizi[0]);
+                //console.log(dizi[3]);
+                
+                //console.log(a);
+
+
+                sonuc = topla(b,c);
+                console.log(sonuc);
+                console.log(b);
+                console.log(c);
+            }
+
+            function topla(sayi1,sayi2)
+            {
+                let  toplama = sayi1+sayi2;
+
+                b= 40;
+                c= 50;
+                return toplama;
+            }
+
 
         </script>
     </head>
     <body>
 
+        <div draggable="true" onfocus="window.alert('Merhaba Dünya!')" style="width: 150px; height: 50px; background-color: black; color: white;">
+            Deneme
+        </div>
+        <input id="deneme" onfocus="deneme()" class="input1" >
         <iframe width="100%" scrolling="no"
          src="header.html" frameBorder="0">
 
@@ -88,7 +150,7 @@
             Test yazısı  3
         </div>
 
-        <div fatih="başlık">
+        <div id="Yazdir" fatih="başlık">
             Test yazısı  4
         </div>
 
@@ -109,6 +171,8 @@
             <li>Deneme 2</li>
             <li>Deneme 3</li>
         </ul>
+
+        <button onclick="Yazdir()">Yazdır</button>
 
         <input id = "sayi" value="0" /> <button onclick="SayiArtir()">Arttır</button>
         <iframe width="100%" scrolling="no"

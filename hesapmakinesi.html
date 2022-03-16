@@ -1,0 +1,46 @@
+<html>
+    <head>
+        
+       
+
+        <script>
+            
+            function topla() {
+                var input1 = document.getElementById("input1").value;
+                var input2 = document.getElementById("input2").value;
+                document.getElementById("sonuc").value = parseFloat(input1) + parseFloat(input2);
+            }
+            function cikar() {
+                var input1 = document.getElementById("input1").value;
+                var input2 = document.getElementById("input2").value;
+                document.getElementById("sonuc").value = parseFloat(input1) - parseFloat(input2);
+            }
+            function carp() {
+                var input1 = document.getElementById("input1").value;
+                var input2 = document.getElementById("input2").value;
+                document.getElementById("sonuc").value = parseFloat(input1) * parseFloat(input2);
+            }
+            function bol() {
+                var input1 = document.getElementById("input1").value;
+                var input2 = document.getElementById("input2").value;
+                document.getElementById("sonuc").value = parseFloat(input1) / parseFloat(input2);
+            }
+
+            function yuzde() {
+                var input1 = document.getElementById("input1").value;
+                var input2 = document.getElementById("input2").value;
+                document.getElementById("sonuc").value = parseFloat(input1) * parseFloat(input2)/100;
+            }
+        </script>
+    </head>
+    <body>
+       <input id="input1" value="0" />
+       <input id="input2" value="0" />
+       <input id="sonuc" value="" />
+       <button onclick="topla()">+</button>
+       <button onclick="cikar()">-</button>
+       <button onclick="carp()">*</button>
+       <button onclick="bol()">/</button>
+       <button onclick="yuzde()">%</button>
+    </body>
+</html>
