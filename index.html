@@ -56,7 +56,21 @@
 
         <script>
             
-            
+            function Bol()
+            {
+                document.getElementById("text2").innerText = "";
+                var txt = document.getElementById("text1").value;
+                var txtDizisi = txt.split(",");
+                let str = "";
+                for (let i = 0; i < txtDizisi.length; i++) {
+                    const element = txtDizisi[i];
+                    str = str + "\n" + element;
+                }
+
+                document.getElementById("text2").innerHTML = str;
+            }
+
+
             var b = 5;
             var c = 10;
 
@@ -172,6 +186,12 @@
             <li>Deneme 3</li>
         </ul>
 
+        <label>Text</label>
+        <input id="text1" value="Deneme1, Deneme2, deneme3, deneme4"/>
+        <textarea id = "text2"></textarea>
+        
+        <button onclick="Bol()">Böl</button>
+        <br/>
         <button onclick="Yazdir()">Yazdır</button>
 
         <input id = "sayi" value="0" /> <button onclick="SayiArtir()">Arttır</button>

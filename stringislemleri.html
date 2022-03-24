@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <script>
+            function TextAra()
+            {
+                var metin = document.getElementById("metin").innerHTML;
+                var text = document.getElementById("text").value;
+
+                metin = metin.replaceAll(text, "<span style='color: red;'>" + text + "</span>");
+                document.getElementById("metin").innerHTML = metin;
+            }   
+
+            function SayilariTopla()
+            {
+                var metin = document.getElementById("metin").innerHTML;
+                var dizi = metin.replace("-", " " ).split(" ");
+                var toplam = 0;
+                for (let i = 0; i < dizi.length; i++) {
+                    const element = dizi[i];
+                    
+                    if(isNaN(parseInt(element)) == false)
+                    {
+                        toplam += parseInt(element);
+                    }
+                }
+
+                document.getElementById("text").value = toplam;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <input id="text">
+            <button onclick="TextAra()">Ara</button>
+            <button onclick="SayilariTopla()">Sayıları Topla</button>
+
+        </div>
+        <div id="metin">
+            Sevgili Öğrenciler, Üniversitemizin Çok Kıymetli Akademik ve İdari Personeli, 
+
+13 Eylül 2021 tarihinde başlayan 2021-2022 Eğitim ve Öğretim Yılı’nın üniversitemiz ve ülkemiz için hayırlı, başarılı ve sağlıklı geçmesini diliyorum. Üniversitemizi bu yıl kazanma başarısı gösteren yeni öğrencilerimizi ve değerli ailelerini de kutluyorum. İnönü Üniversitesi ailesine hoş geldiniz. 
+
+1975 yılında kurulan üniversitemiz, 40 bini aşkın öğrencisi, 6200 akademik ve idari personeli ve 150 bini aşan mezunuyla 46 yıllık köklü bir eğitim kurumudur. Kurumsal yapımız, seçkin akademik ve idari kadromuz ile önümüzdeki eğitim-öğretim döneminde de nitelikli insan kaynağı yetiştirmeye, bilgi üretmeye, bilimsel araştırma yapmaya ve topluma katkı sunmaya devam edeceğiz.
+
+Huzur ve güven şehri Malatya ile bütünleşen üniversitemiz, her türlü bireysel ve akademik gelişiminizi gerçekleştirebileceğiniz sağlam altyapıya, zengin sosyal ve kültürel donanıma sahiptir. Kütüphanelerimiz, sosyal ve kültürel mekânlarımız, güçlü internet altyapımız, öğrenci topluluklarımız, yürüyüş alanlarımız, spor tesislerimiz ile her daim canlı ve zengin bir kampüs yaşamı sizleri beklemektedir. 
+
+Küresel salgın nedeniyle ara verdiğimiz yüz yüze eğitime başlamanın büyük heyecanını yaşıyoruz. Salgınla mücadelenin en etkili yolu aşı olup, maske, mesafe ve temizlik kurallarına uymaktır. Bunlar yüz yüze eğitimin sürdürülebilmesi için vazgeçilmezdir. Bu konuda geleceğimiz olan siz gençlerin güçlü bir destek vereceğinize olan inancımız tamdır. 
+
+2021-2022 eğitim-öğretim yılının tüm öğrenci ve personelimiz için başarılı, sağlıklı ve verimli geçmesini dilerim.
+
+Prof. Dr. Ahmet Kızılay
+
+Rektör
+
+
+
+Kişisel web sayfasına erişmek için tıklayınız
+
+İletişim Bilgileri
+
+Telefon: 0422 377 33 00 - 01
+
+Faks: 0422 377 33 56
+
+E-Posta : rektor@inonu.edu.tr / ahmet.kizilay@inonu.edu.tr
+
+Adres: İnönü Üniversitesi Rektörlüğü 44280 / MALATYA
+        </div>
+    </body>
+
+</html>
