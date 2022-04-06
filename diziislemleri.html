@@ -1,0 +1,60 @@
+<html>
+    <head>
+    <script>
+        var dizi=[];
+        function Push()
+        {
+            var sayi = document.getElementById("txt").value;
+            dizi.push(sayi);
+            Yazdir();
+        }
+
+        function Pop()
+        {
+            var sayi = document.getElementById("txt").value;
+            dizi.pop();
+            Yazdir();
+        }
+
+        function Yazdir()
+        {
+            var sonuc = dizi.join(" ");
+            document.getElementById("Sonuc").innerText = sonuc;
+        }
+
+        function RemoveConflicts()
+        {
+            for (let i = 0; i < dizi.length; i++) {
+                const element = dizi[i];
+
+                for (let j = 0; j < dizi.length; j++) {
+                    const element = dizi[j];
+                    if(i != j && dizi[i] == dizi[j])
+                    {
+                        if(i > j)
+                        {
+                           dizi.splice(i,1);
+                        }
+                        else
+                        {
+                            dizi.splice(j,1);
+                        }
+                    }
+                }
+                
+            }
+
+            Yazdir();
+        }
+    </script>
+    </head>
+<body>
+    <input id="txt">
+<button onclick="Pop()">Pop</button>
+<button onclick="Push()">Push</button>
+<button onclick="RemoveConflicts()">Tekrar Edenleri Sil</button>
+<div id="Sonuc">
+
+</div>
+</body>
+</html>
